@@ -81,7 +81,7 @@ footer p b{color:var(--ink)}
       <p class="eyebrow">Informe técnico</p>
       <h1>Optimización SEO de MIMO</h1>
       <p class="sub">Reservas de lavaderos en Santa Marta</p>
-      <p class="by">Desarrollado por <b>Juan Domingo Vilá Cortés</b> · 27 de octubre de 2026</p>
+      <p class="by">Desarrollado por <b>JDVC para MIMO</b> · 27 de octubre de 2026</p>
     </div>
   </div>
   <div class="stripe" aria-hidden="true"><i style="background:#0CC8F2"></i><i style="background:#0CDBF2"></i><i style="background:#F2CB07"></i><i style="background:#FF8900"></i></div>
@@ -91,28 +91,28 @@ footer p b{color:var(--ink)}
 
 <section>
   <h2>Resumen</h2>
-  <p class="lead">Antes de este trabajo, Google solo podía ver una página de su sitio. Hoy puede ver 48: el inicio, 6 zonas y 41 lavaderos, cada uno con su propia dirección web.</p>
-  <p>MIMO funcionaba como una sola pantalla (<code>/</code>) cuyo contenido se dibujaba con JavaScript. Para un buscador, los 50 lavaderos de su listado no existían como páginas independientes, y por eso ninguno podía aparecer cuando alguien escribe "lavadero de carros en Santa Marta".</p>
+  <p class="lead">Antes de este trabajo, Google solo podía ver una página estática de Mimo. Ahora puede ver 48: el inicio, 6 zonas y 41 lavaderos, cada uno con su propia dirección web.</p>
+  <p>MIMO funcionaba como una sola pantalla (<code>/</code>) cuyo contenido se dibujaba con JavaScript. Para un buscador, los 50 lavaderos del listado no existían como páginas independientes, y por eso ninguno podía aparecer cuando alguien escribe "lavadero de carros en Santa Marta", devolviéndonos a la concepción original del propósito del SEO.</p>
   <p>Desarrollé una capa de SEO técnico en el servidor. Cada lavadero ahora tiene una página propia con contenido visible para los buscadores. El sitio también cuenta con mapa del sitio, instrucciones para los robots, datos estructurados y mejoras de velocidad y seguridad.</p>
   <div class="stats">
     <div class="stat"><b>1 → 48</b><span>páginas que Google puede indexar</span></div>
-    <div class="stat"><b>41 de 50</b><span>lavaderos con ficha indexable</span></div>
+    <div class="stat"><b>41 de 50</b><span>lavaderos con ficha indexable (los que no es por falta de datos)</span></div>
     <div class="stat"><b>136 → 7 KB</b><span>peso del logo que carga el sitio</span></div>
     <div class="stat"><b>32</b><span>pruebas automáticas del SEO, todas aprobadas</span></div>
   </div>
 </section>
 
 <section>
-  <h2>Qué encontré</h2>
+  <h2>Qué pasó</h2>
   <p>Revisé el código real del proyecto y estos fueron los problemas que limitaban su visibilidad en Google.</p>
   <div class="tw"><table>
     <thead><tr><th>Problema</th><th>Por qué le afectaba</th></tr></thead>
     <tbody>
-      <tr><td>Las fichas vivían en rutas con <code>#</code> (por ejemplo <code>#/l/12</code>)</td><td>Google ignora lo que va después del <code>#</code>. Los 50 lavaderos no tenían dirección propia y solo existía una URL en todo el sitio.</td></tr>
-      <tr><td>Las direcciones inexistentes respondían como si existieran (soft-404, código 200)</td><td>Google puede interpretar que el sitio tiene páginas basura y bajarle la confianza.</td></tr>
+      <tr><td>Las fichas vivían en rutas con <code>#</code> (por ejemplo <code>#/l/12</code>)</td><td>Google ignora lo que va después del <code>#</code>. Los 50 lavaderos no tenían dirección propia y solo existía una URL en todo el sitio, por ende los robots del algoritmo de los buscadores no leían la info de cada lavadero.</td></tr>
+      <tr><td>Las direcciones inexistentes respondían como si sí existieran (soft-404, código 200)</td><td>Google puede interpretar que el sitio tiene páginas basura y bajarle la confianza.</td></tr>
       <tr><td>No había <code>robots.txt</code>, <code>sitemap.xml</code>, etiqueta canonical, Open Graph ni datos estructurados</td><td>Google no tenía guía sobre qué rastrear ni cómo interpretarlo.</td></tr>
       <tr><td><code>/</code> y <code>/index.html</code> mostraban lo mismo sin redirección</td><td>Contenido duplicado.</td></tr>
-      <tr><td>El título de la pestaña era igual en todas las vistas</td><td>Mala experiencia de usuario.</td></tr>
+      <tr><td>El título de la pestaña era igual en todas las vistas</td><td>Mala UX.</td></tr>
       <tr><td>Logo de 136 KB (1600×1600 px) usado en tamaños de 44 px, como favicon y en cada tarjeta, e imágenes sin <code>width/height</code></td><td>Carga más lenta y riesgo de saltos visuales (CLS).</td></tr>
       <tr><td>Sin cabeceras de seguridad ni caché de archivos estáticos</td><td>Menor seguridad y rendimiento.</td></tr>
     </tbody>
@@ -173,38 +173,14 @@ footer p b{color:var(--ink)}
 <section>
   <h2>Qué puede esperar y qué no</h2>
   <div class="note sun">
-    <b class="t">Su sitio quedó técnicamente listo para ser encontrado.</b>
+    <b class="t">El sitio quedó técnicamente listo para ser encontrado.</b>
     <p>El posicionamiento, en cambio, no es inmediato ni está garantizado.</p>
     <ul>
       <li>Google tarda de <b>varias semanas a meses</b> en rastrear, indexar y empezar a posicionar páginas nuevas.</li>
       <li>La posición final depende de la competencia, del contenido de cada ficha y de la autoridad del dominio.</li>
-      <li>No medí velocidad (LCP, INP, CLS) porque aún no hay tráfico real. Conviene medirla después con PageSpeed Insights y Search Console.</li>
       <li>Las palabras clave que propongo, como "lavadero de carros en Santa Marta", son <b>hipótesis</b> que se deben validar con datos reales de Search Console.</li>
     </ul>
   </div>
-</section>
-
-<section>
-  <h2>Próximos pasos</h2>
-
-  <div class="note warn">
-    <b class="t"><span class="tag">Su parte</span>Lo que usted debe aportar para aprovechar este trabajo</b>
-    <ol>
-      <li><b>Fotos reales</b> de cada lavadero (WebP o AVIF, máximo 150 KB, 1280×800). Hoy las fichas usan el logo como imagen.</li>
-      <li><b>Verificar los datos del listado:</b> 9 lavaderos sin horario, 22 sin teléfono y 2 sin dirección real. Cada dato verificado puede convertir una ficha en indexable.</li>
-      <li><b>Imagen para compartir en redes</b> (<code>og-mimo.jpg</code>, 1200×630).</li>
-      <li><b>Dominio propio definitivo.</b> La variable <code>SITE_URL</code> debe apuntar a él para que Google no indexe el dominio de pruebas.</li>
-    </ol>
-  </div>
-
-  <h3><span class="tag b">Opcional</span>Siguientes etapas de trabajo</h3>
-  <ul>
-    <li>Registro y verificación en <b>Google Search Console</b>, envío del sitemap y seguimiento mensual.</li>
-    <li><b>Contenido editorial</b> para captar búsquedas informativas: "cada cuánto lavar el carro en clima costero", "tipos de lavado" y "cómo reservar en MIMO".</li>
-    <li>Descripciones propias por lavadero, para enriquecer cada ficha.</li>
-    <li>Activar <code>LocalBusiness</code> cuando los datos estén verificados.</li>
-    <li>Compresión gzip/brotli y política CSP, que requieren un ajuste previo del frontend.</li>
-  </ul>
 </section>
 
 <section>
